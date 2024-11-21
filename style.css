@@ -13,8 +13,7 @@ body {
 .container {
     width: 1180px;
     margin: 0 auto;
-    padding-top: 100px;
-    padding: 30px;
+    padding: 120px 30px 0px 30px;
     /* background-color: #f5f3e9; */
 }
 
@@ -385,7 +384,7 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 20px auto;
+    margin: 60px auto;
 }
 
 #left-zone {
@@ -475,7 +474,7 @@ nav {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .price-card {
@@ -618,8 +617,7 @@ nav {
 }
 
 .feedback-input {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #BFDBE6;
+    /* font-family: Helvetica, Arial, sans-serif; */
     font-size: 18px;
     line-height: 22px;
     padding: 10px;
