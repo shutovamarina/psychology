@@ -99,7 +99,7 @@ nav {
     text-align: center;
     padding: 11px 25px 12px 25px;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
     color: #2C3E50;
     text-decoration: none;
 }
@@ -156,6 +156,7 @@ nav {
     margin-top: 300px;
     margin-left: 50%;
     width: 250px;
+    border-radius: 30px;
 }
 
 .background-image {
@@ -301,13 +302,13 @@ nav {
 .cta {
     /*  background: #333; */
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-    height: 360px;
+    height: 350px;
     overflow: hidden;
     position: relative;
     width: 300px;
     &:hover {
         .services_img {
-            top: -10%;
+            top: -90%;
             filter: brightness(70%);
         }
         .services_descr {
@@ -320,13 +321,13 @@ nav {
         left: 0;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 10%;
         transition: 0.5s ease-in-out;
         width: 90%;
     }
     .services_descr {
-        bottom: -40%;
-        padding: 15px;
+        bottom: -65%;
+        padding: 25px;
         position: absolute;
         transition: 0.5s ease-in-out;
     }
