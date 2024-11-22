@@ -176,11 +176,6 @@ nav {
     /* Необязательно: добавляет прозрачность для лучшей читаемости текста */
 }
 
-.navbar-brand {
-    font-family: "Marck Script", cursive;
-    font-size: 26px;
-}
-
 .resume__subtitle {
     text-align: center;
 }
@@ -311,7 +306,6 @@ nav {
     &:hover {
         .services_img {
             top: -90%;
-            filter: brightness(70%);
         }
         .services_descr {
             bottom: 0;
@@ -622,7 +616,7 @@ nav {
     line-height: 22px;
     padding: 10px;
     border: 1px solid white;
-    border-bottom: 1px dotted #BFDBE6;
+    border-bottom: 2px dotted #BFDBE6;
     width: 90%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
