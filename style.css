@@ -282,6 +282,25 @@ nav {
     margin-top: 5px;
 }
 
+.toggle-btn {
+    margin-top: 10px;
+    font-size: 12px;
+    background: #f7dd70;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #e6c65c;
+}
+
+.collapsible-text {
+    display: none;
+}
+
 
 /* карточки */
 
@@ -392,7 +411,7 @@ nav {
 .carousel-item {
     display: none;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 5%;
 }
 
 .carousel-item.active {

@@ -33,6 +33,22 @@ function cycleTestimonials(index) {
 //run the function
 cycleTestimonials(0);
 
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const collapsibleText = button.previousElementSibling.querySelector(".collapsible-text");
+            if (collapsibleText.style.display === "none" || !collapsibleText.style.display) {
+                collapsibleText.style.display = "inline";
+                button.textContent = "Свернуть";
+            } else {
+                collapsibleText.style.display = "none";
+                button.textContent = "Развернуть";
+            }
+        });
+    });
+});
 
 //карусуль дипломы
 document.addEventListener('DOMContentLoaded', function() {
