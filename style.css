@@ -218,7 +218,7 @@ nav {
     width: 1px;
     height: calc(100% + 16px);
     position: absolute;
-    top: -16px;
+    top: 7px;
     left: 0;
     background-color: #000;
 }
@@ -265,7 +265,6 @@ nav {
     height: 36px;
     border-radius: 100%;
     background: #f7dd70;
-    /* z-index: -1; */
     top: -25%;
     left: 0;
 }
@@ -281,25 +280,6 @@ nav {
     font-size: 12px;
     line-height: 18px;
     margin-top: 5px;
-}
-
-.toggle-btn {
-    margin-top: 10px;
-    font-size: 12px;
-    background: #f7dd70;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-}
-
-.toggle-btn:hover {
-    background: #e6c65c;
-}
-
-.collapsible-text {
-    display: none;
 }
 
 
@@ -442,7 +422,7 @@ nav {
 }
 
 #diploma-text {
-    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
 
