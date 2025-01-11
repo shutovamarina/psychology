@@ -140,7 +140,8 @@ nav {
     /* Текст будет выше изображения */
     font-size: 20px;
     /* Настройте размер текста */
-    color: #2C3E50;
+    /* color: #2C3E50; */
+    color: #666;
 }
 
 .about__descr {
@@ -299,16 +300,17 @@ nav {
 .cta {
     background-color: #fff;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
-    height: 320px;
+    height: 250px;
     overflow: hidden;
     position: relative;
     width: 250px;
     &:hover {
         .services_img {
-            top: -90%;
+            top: -80%;
+            width: 100px;
         }
         .services_descr {
-            bottom: 0;
+            bottom: 45px;
         }
     }
     .services_img {
@@ -335,8 +337,11 @@ nav {
         position: relative;
     }
     .services_text {
-        color: #2C3E50;
-        font-weight: 300;
+        /* color: #2C3E50; */
+        color: #666;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
     }
 }
 
