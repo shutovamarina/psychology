@@ -1,0 +1,157 @@
+.resume__subtitle {
+    text-align: center;
+}
+
+.resume__wrapper {
+    padding: 60px 65px 0 65px;
+    display: grid;
+    grid-template-columns: repeat(2, 425px);
+    column-gap: 135px;
+}
+
+.resume__column-title {
+    position: relative;
+    padding-left: 35px;
+    text-align: center;
+}
+
+.resume__column-title:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #f7dd70;
+    border-radius: 100%;
+    left: 25px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.resume__column ul {
+    list-style-type: none;
+}
+
+.resume__column ul li {
+    position: relative;
+}
+
+.resume__column ul li:after {
+    content: '';
+    width: 1px;
+    height: calc(100% + 16px);
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: #000;
+}
+
+.resume__item {
+    position: relative;
+}
+
+.resume__item:before {
+    content: '';
+    height: 1px;
+    width: 45px;
+    position: absolute;
+    top: 68px;
+    background-color: #000;
+}
+
+.resume__item-head {
+    position: relative;
+    padding: 45px 0 0 100px;
+}
+
+.resume__item-head h4 {
+    margin-bottom: 0;
+}
+
+.resume__item-body {
+    padding-left: 43px;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.resume__item-icon {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+}
+
+.resume__item-icon:before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: #f7dd70;
+    top: -25%;
+    left: 0;
+}
+
+.resume__item-icon img {
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    width: 24px;
+}
+
+.resume__item-location {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+}
+
+#scene {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 60px auto;
+}
+
+#left-zone {
+    width: 45%;
+}
+
+#carousel {
+    position: relative;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+#right-zone {
+    width: 45%;
+}
+
+#diploma-list {
+    list-style: none;
+    padding: 0;
+}
+
+#diploma-list li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#diploma-list li.active {
+    background-color: #BFDBE6;
+}
+
+#diploma-text {
+    margin-bottom: 10px;
+    font-size: 20px;
+}

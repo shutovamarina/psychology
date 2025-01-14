@@ -5,11 +5,11 @@ function cycleTestimonials(index) {
     timer = setTimeout(function() {
         var evt;
         if (document.createEvent) {
-            //If browser = IE, then polyfill
+
             evt = document.createEvent('MouseEvent');
             evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
         } else {
-            //If Browser = modern, then create new MouseEvent
+
             evt = new MouseEvent("click", {
                 view: window,
                 bubbles: true,
@@ -20,17 +20,17 @@ function cycleTestimonials(index) {
         var ele = "." + testimonialItems[index].className;
         var ele2 = document.querySelector(ele)
         ele2.dispatchEvent(evt);
-        index++; // Increment the index
+        index++;
         if (index >= testimonialItems.length) {
-            index = 0; // Set it back to `0` when it reaches `3`
+            index = 0;
         }
-        cycleTestimonials(index); // recursively call `cycleTestimonials()`
+        cycleTestimonials(index);
         document.querySelector(".testimonials").addEventListener("click", function() {
-            clearTimeout(timer); //stop the carousel when someone clicks on the div
+            clearTimeout(timer);
         });
-    }, 2000); //adjust scroll speed in miliseconds
+    }, 2000);
 }
-//run the function
+
 cycleTestimonials(0);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -55,16 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const diplomaList = document.querySelectorAll('#diploma-list li');
     const images = document.querySelectorAll('.carousel-item');
 
-    // Добавляем обработчик событий для кликов на элементы списка
+
     diplomaList.forEach((item, index) => {
         item.addEventListener('click', () => {
-            // Снимаем выделение со всех пунктов
+
             diplomaList.forEach(li => li.classList.remove('active'));
 
-            // Подсвечиваем выбранный пункт
+
             item.classList.add('active');
 
-            // Показываем соответствующее изображение и скрываем остальные
+
             images.forEach((img, imgIndex) => {
                 img.classList.remove('active');
                 if (imgIndex === index) {
@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const answer = item.querySelector('.answer');
 
         btn.addEventListener('click', () => {
-            // Переключение видимости ответа
+
             const isVisible = answer.style.display === 'block';
             answer.style.display = isVisible ? 'none' : 'block';
 
-            // Изменение текста кнопки
+
             btn.textContent = isVisible ? '+' : '−';
         });
     });

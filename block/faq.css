@@ -1,0 +1,33 @@
+/* раздел вопрос ответ */
+
+.faq-items {
+    margin-top: 60px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}

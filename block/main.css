@@ -1,0 +1,58 @@
+.main-text {
+    padding: 5px;
+    margin-top: 200px;
+    margin-left: 500px;
+    text-align: center;
+}
+
+.main__title {
+    color: #f1ecda;
+    font-size: 40px;
+    margin: 30px;
+    text-shadow: 4px -4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main__subtitle {
+    color: #f1ecda;
+    font-size: 36px;
+    text-shadow: 4px -4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main_btn,
+.main__link {
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 10px;
+    height: 45px;
+    background: #F7DC6F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 11px 25px 12px 25px;
+    border: none;
+    border-radius: 25px;
+    color: #2C3E50;
+    text-decoration: none;
+}
+
+.main-header {
+    background-image: url(../img/main.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Настройте ширину */
+    height: auto;
+    /* Настройте высоту, если нужно */
+    z-index: 1;
+    /* Изображение будет под текстом */
+    opacity: 0.5;
+    /* Необязательно: добавляет прозрачность для лучшей читаемости текста */
+}
