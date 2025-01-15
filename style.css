@@ -9,6 +9,7 @@
     margin: 0 auto;
     padding: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,9 +19,9 @@ body {
 }
 
 .container {
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 120px 30px 0px 30px;
+    padding: 100px 30px 0px 30px;
 }
 
 h2 {
@@ -29,18 +30,6 @@ h2 {
     z-index: 2;
     font-size: 20px;
     text-align: center;
-}
-
-nav {
-    background-color: #F7DC6F;
-}
-
-.navbar-brand {
-    background-color: #F7DC6F;
-    color: #2C3E50;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
 }
 
 .title {
@@ -90,5 +79,11 @@ nav {
     scroll-behavior: smooth;
     img {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 80px 30px 0px 30px;
     }
 }
