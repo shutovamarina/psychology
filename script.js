@@ -49,19 +49,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-//карусуль дипломы
 document.addEventListener('DOMContentLoaded', function() {
+
     const diplomaList = document.querySelectorAll('#diploma-list li');
     const images = document.querySelectorAll('.carousel-item');
+    const modal = document.getElementById('diploma-modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeModal = document.getElementById('close-modal');
+
+
+    let isMobile = window.innerWidth <= 1025;
+
+
+    const updateIsMobile = () => {
+        isMobile = window.innerWidth <= 1025;
+    };
+
+
+    window.addEventListener('resize', updateIsMobile);
 
 
     diplomaList.forEach((item, index) => {
         item.addEventListener('click', () => {
 
             diplomaList.forEach(li => li.classList.remove('active'));
-
-
             item.classList.add('active');
 
 
@@ -71,7 +82,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     img.classList.add('active');
                 }
             });
+
+
+            if (isMobile) {
+                const imgSrc = item.getAttribute('data-img');
+                modal.style.display = 'flex';
+                modalImage.src = imgSrc;
+            }
         });
+    });
+
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
     });
 });
 

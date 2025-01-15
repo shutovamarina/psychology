@@ -161,7 +161,18 @@ textarea {
     outline: none;
 }
 
+@media (max-width: 1024px) {
+    .contacts__photo img {
+        width: 60%;
+    }
+}
+
 @media only screen and (max-width: 710px) {
+    .contacts__descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .name_def {
         left: 40%;
     }
