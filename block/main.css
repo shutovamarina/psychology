@@ -44,7 +44,8 @@ nav {
     margin-top: 50px;
 }
 
-.main__link {
+.main__link,
+.main__btn {
     cursor: pointer;
     margin-top: 30px;
     background: #F7DC6F;
@@ -56,6 +57,10 @@ nav {
     color: #2C3E50;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main__link {
+    margin-right: 20px;
 }
 
 .main-header {
@@ -107,8 +112,12 @@ nav {
     }
     .main_btn,
     .main__link {
-        width: 60%;
-        padding: 15px;
+        width: 30%;
+        /* padding: 15px; */
+        text-align: center;
+    }
+    .main__link {
+        margin-right: auto;
         text-align: center;
     }
     .navbar-nav .nav-link {
@@ -119,16 +128,16 @@ nav {
 
 @media (max-width: 480px) {
     .main-header {
-        background-position: 40%;
+        background-position: 35%;
     }
     .main__title {
-        font-size: 25px;
+        font-size: 22px;
     }
     .main__subtitle {
         font-size: 22px;
     }
     .main-text {
-        margin-top: 200px;
+        margin-top: 270px;
         margin-left: 40px;
         margin-right: 10px;
     }
@@ -138,7 +147,7 @@ nav {
     .main_btn,
     .main__link {
         padding: 10px 12px;
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
