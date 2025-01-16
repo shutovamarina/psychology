@@ -131,18 +131,19 @@ nav {
         background-position: 35%;
     }
     .main__title {
-        font-size: 22px;
+        font-size: 25px;
     }
     .main__subtitle {
-        font-size: 22px;
+        font-size: 25px;
     }
     .main-text {
-        margin-top: 270px;
+        margin-top: 100px;
         margin-left: 40px;
         margin-right: 10px;
     }
     .main-btn {
         gap: 10px;
+        margin-top: 200px;
     }
     .main_btn,
     .main__link {
