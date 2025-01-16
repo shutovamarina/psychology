@@ -128,7 +128,7 @@ nav {
 
 @media (max-width: 480px) {
     .main-header {
-        background-position: 35%;
+        background-position: 20%;
     }
     .main__title {
         font-size: 25px;
