@@ -422,25 +422,25 @@
                     <h3>Консультация</h3>
                     <p class="price">3000 руб.</p>
                     <p class="description">Индивидуальная консультация для решения личных вопросов.</p>
-                    <div><a class="btn-signup" href="tel:+79024866985" target="_blank">Записаться</a></div>
+                    <div><a class="btn-signup" href="#contacts" target="_blank">Записаться</a></div>
                 </div>
                 <div class="price-card">
                     <h3>Семейная консультация</h3>
                     <p class="price">4500 руб.</p>
                     <p class="description">Совместные консультации для пары или всей семьи.</p>
-                    <div><a class="btn-signup" href="tel:+79024866985" target="_blank">Записаться</a></div>
+                    <div><a class="btn-signup" href="#contacts" target="_blank">Записаться</a></div>
                 </div>
                 <div class="price-card">
                     <h3>Пакет из 5 сеансов</h3>
                     <p class="price">14000 руб.</p>
                     <p class="description">Экономия при покупке пакета консультаций.</p>
-                    <div><a class="btn-signup" href="tel:+79024866985" target="_blank">Записаться</a></div>
+                    <div><a class="btn-signup" href="#contacts" target="_blank">Записаться</a></div>
                 </div>
                 <div class="price-card">
                     <h3>Групповая терапия</h3>
                     <p class="price">2000 руб./чел.</p>
                     <p class="description">Терапия в группе для обсуждения общих тем и поддержки.</p>
-                    <div><a class="btn-signup" href="tel:+79024866985" target="_blank">Записаться</a></div>
+                    <div><a class="btn-signup" href="#contacts" target="_blank">Записаться</a></div>
                 </div>
             </div>
     </section>
@@ -479,12 +479,26 @@
                     <div class="title title_fz14 contacts__text">
                         Или оставьте ваши данные и я сама вам напишу:
                     </div>
-                    <form action="https://formspree.io/f/xkgnzqlg" method="POST" class="form">
+                    <!-- <form action="https://formspree.io/f/xkgnzqlg" method="POST" class="form">
                         <input name="name" type="text" class="name feedback-input" placeholder="Ваше Имя" />
                         <input name="email" type="text" class="email feedback-input" placeholder="Ваша почта" />
                         <textarea name="text" class="message feedback-input" placeholder="Ваше сообщение"></textarea>
                         <input class="submit-button" type="submit" value="Отправить сообщение">
+                    </form> -->
+                    <form id="feedbackForm" class="form">
+                        <input name="name" type="text" class="name feedback-input" placeholder="Ваше Имя" required />
+                        <input name="email" type="text" class="email feedback-input" placeholder="Ваша почта" required />
+                        <textarea name="text" class="message feedback-input" placeholder="Ваше сообщение" required></textarea>
+                        <input class="submit-button" type="submit" value="Отправить сообщение">
                     </form>
+
+                    <!-- Модальное окно -->
+                    <div id="modal" class="modal hidden">
+                        <div class="modal-content">
+                            <p>Спасибо! Письмо было успешно отправлено.</p>
+                            <button id="closeModal">Закрыть</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>

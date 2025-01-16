@@ -60,7 +60,13 @@
 }
 
 @media (max-width: 768px) {
-    .services_img {
+    .cta .services_img {
+        width: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta .services_img {
         width: 170px;
     }
 }

@@ -123,31 +123,97 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("feedbackForm");
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementById("closeModal");
 
-//модальное окно
+    // Telegram bot token и chat ID
+    const BOT_TOKEN = "7513886464:AAEVVvuW-6Z69fJmxn80PnqtSOs6PgjsV6";
+    const CHAT_ID = "1233898357";
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Функция для отправки сообщения в Telegram
+    const sendToTelegram = async(message) => {
+        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ chat_id: CHAT_ID, text: message }),
+            });
+
+            const data = await response.json(); // Получаем ответ от API
+            if (!response.ok) {
+                console.error("Ошибка при отправке:", data);
+            }
+            return response.ok;
+        } catch (error) {
+            console.error("Ошибка сети или API:", error);
+            return false;
+        }
+    };
+
+    // Обработчик отправки формы
+    form.addEventListener("submit", async(event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const text = formData.get("text");
+
+        const message = `Новое сообщение с формы:\n\nИмя: ${name}\nEmail: ${email}\nСообщение: ${text}`;
+
+        // Отправляем данные в Telegram
+        const success = await sendToTelegram(message);
+
+        if (success) {
+            // Очищаем форму
+            form.reset();
+
+            // Показываем модальное окно
+            modal.classList.remove("hidden");
+        } else {
+            alert("Ошибка отправки сообщения. Проверьте соединение или настройки.");
+        }
+    });
+
+    // Закрытие модального окна
+    closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    // Закрытие модального окна при клике вне его
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+});
+
+
+/* document.addEventListener('DOMContentLoaded', function() {
     const openModalBtn = document.getElementById('openModalBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modal = document.getElementById('modal');
 
-    // Открытие модального окна
+    
     openModalBtn.addEventListener('click', function() {
         modal.style.display = 'block';
     });
 
-    // Закрытие модального окна
+    
     closeModalBtn.addEventListener('click', function() {
         modal.style.display = 'none';
     });
 
-    // Закрытие модального окна при клике вне его
+    
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
     });
-});
+}); */
 
 
 $(".definition").hide();
