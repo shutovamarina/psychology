@@ -223,13 +223,13 @@
             display: none;
         }
         #diploma-modal img {
-            width: 70%;
+            width: 80%;
             border-radius: 10px;
         }
         #close-modal {
             position: absolute;
-            top: 0px;
-            right: 35px;
+            top: -33px;
+            right: 33px;
             font-size: 30px;
             color: white;
             cursor: pointer;

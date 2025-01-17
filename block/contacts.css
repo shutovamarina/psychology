@@ -159,6 +159,12 @@ textarea {
     display: none;
 }
 
+
+/* Стиль модального окна */
+
+
+/* Стиль модального окна */
+
 .modal {
     position: fixed;
     top: 0;
@@ -171,18 +177,52 @@ textarea {
     align-items: center;
 }
 
-.modal-content {
+
+/* Стиль контента модального окна */
+
+.modal-content-thanks {
     background: white;
     padding: 20px;
+    margin: 10px;
     border-radius: 10px;
+    text-align: center;
+    position: relative;
+    /* Для позиционирования крестика */
+}
+
+
+/* Стиль для текста внутри модального окна */
+
+.modal-content-thanks p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #2C3E50;
     text-align: center;
 }
 
-.modal-content p {
-    margin-bottom: 15px;
+
+/* Стиль кнопки закрытия */
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    z-index: 10;
+    /* Размещаем крестик поверх контента */
 }
 
-.modal-content button {
+.close-btn:hover {
+    color: #333;
+}
+
+
+/* Стиль кнопки внизу, если она нужна */
+
+.modal-content-thanks button {
     padding: 10px 20px;
     background: #BFDBE6;
     border: none;
@@ -191,8 +231,15 @@ textarea {
     transition: background-color 0.3s;
 }
 
-.modal-content button:hover {
+.modal-content-thanks button:hover {
     background: #f7dd70;
+}
+
+
+/* Скрыть модальное окно по умолчанию */
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 1024px) {

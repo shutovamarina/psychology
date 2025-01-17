@@ -123,73 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("feedbackForm");
-    const modal = document.getElementById("modal");
-    const closeModal = document.getElementById("closeModal");
-
-    // Telegram bot token и chat ID
-    const BOT_TOKEN = "7513886464:AAEVVvuW-6Z69fJmxn80PnqtSOs6PgjsV6";
-    const CHAT_ID = "1233898357";
-
-    // Функция для отправки сообщения в Telegram
-    const sendToTelegram = async(message) => {
-        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-        try {
-            const response = await fetch(url, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ chat_id: CHAT_ID, text: message }),
-            });
-
-            const data = await response.json(); // Получаем ответ от API
-            if (!response.ok) {
-                console.error("Ошибка при отправке:", data);
-            }
-            return response.ok;
-        } catch (error) {
-            console.error("Ошибка сети или API:", error);
-            return false;
-        }
-    };
-
-    // Обработчик отправки формы
-    form.addEventListener("submit", async(event) => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const text = formData.get("text");
-
-        const message = `Новое сообщение с формы:\n\nИмя: ${name}\nEmail: ${email}\nСообщение: ${text}`;
-
-        // Отправляем данные в Telegram
-        const success = await sendToTelegram(message);
-
-        if (success) {
-            // Очищаем форму
-            form.reset();
-
-            // Показываем модальное окно
-            modal.classList.remove("hidden");
-        } else {
-            alert("Ошибка отправки сообщения. Проверьте соединение или настройки.");
-        }
-    });
-
-    // Закрытие модального окна
-    closeModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
-    });
-
-    // Закрытие модального окна при клике вне его
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.classList.add("hidden");
-        }
-    });
-});
 
 
 /* document.addEventListener('DOMContentLoaded', function() {
@@ -197,17 +130,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modal = document.getElementById('modal');
 
-    
+
     openModalBtn.addEventListener('click', function() {
         modal.style.display = 'block';
     });
 
-    
+
     closeModalBtn.addEventListener('click', function() {
         modal.style.display = 'none';
     });
 
-    
+
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -215,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 }); */
 
-
+/* 
 $(".definition").hide();
 
 function myFunction($myVar, $myVar_def) {
@@ -228,4 +161,58 @@ function myFunction($myVar, $myVar_def) {
 
 myFunction($(".name"), $(".name_def"));
 myFunction($(".email"), $(".email_def"));
-myFunction($(".message"), $(".message_def"));
+myFunction($(".message"), $(".message_def")); */
+
+
+/* window.onload = function() {
+ 
+    document.getElementById("form").reset();
+}; */
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".form");
+    const modal = document.getElementById("successModal");
+    const closeModal = document.getElementById("closeModal");
+    const closeSuccessModal = document.getElementById("closeSuccessModal");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Останавливает стандартное поведение отправки формы
+
+        // Отправляем форму через fetch
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: new FormData(form),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Очищаем форму после успешной отправки
+                form.reset();
+
+                // Показать модальное окно с благодарностью
+                modal.classList.remove("hidden");
+            })
+            .catch(error => {
+                console.error('Ошибка отправки формы:', error);
+                alert('Ошибка отправки формы. Попробуйте еще раз.');
+            });
+    });
+
+    // Закрыть модальное окно при клике на "закрыть"
+    closeModal.addEventListener("click", function() {
+        modal.classList.add("hidden");
+    });
+
+    // Закрыть модальное окно при клике на кнопку "Закрыть"
+    closeSuccessModal.addEventListener("click", function() {
+        modal.classList.add("hidden");
+    });
+
+    // Закрыть модальное окно, если кликнули вне его
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });
+});
