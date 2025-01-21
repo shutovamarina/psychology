@@ -81,6 +81,18 @@ h2 {
     }
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.web_developer,
+.police {
+    color: #aaa;
+    font-size: 14px;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 80px 30px 0px 30px;
