@@ -94,19 +94,20 @@ h2 {
 }
 
 .policy {
-    font-family: 'Arial' sans-serif !important;
     margin: 20px;
     padding: 0 15px 0 15px;
-    h4 {
-        text-align: center;
-    }
-    h5 {
-        font-family: 'Arial' sans-serif;
-    }
-    &__points {
-        margin: 16px;
-        font-family: 'Arial' sans-serif;
-    }
+    text-align: start;
+}
+
+h4,
+h5 {
+    text-align: center;
+    margin: 16px;
+}
+
+.policy__points {
+    margin: 16px;
+    text-align: start;
 }
 
 @media (max-width: 768px) {
